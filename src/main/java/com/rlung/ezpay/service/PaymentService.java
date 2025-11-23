@@ -5,6 +5,7 @@ import com.rlung.ezpay.dto.PaymentResponse;
 import com.rlung.ezpay.entity.Payment;
 import com.rlung.ezpay.event.PaymentCreatedEvent;
 import com.rlung.ezpay.repo.PaymentRepository;
+import com.rlung.ezpay.repo.WebhookDeliveryRepository;
 import com.rlung.ezpay.util.CardUtil;
 import com.rlung.ezpay.util.CryptoUtil;
 import com.rlung.ezpay.util.IdGenerator;
@@ -25,6 +26,8 @@ public class PaymentService {
 
     private final PaymentPersistenceService paymentPersistenceService;
     private final ApplicationEventPublisher eventPublisher;
+    private final PaymentRepository paymentRepo;
+    private final WebhookDeliveryRepository deliveryRepo;
 
     @Value("${app.encryption.key}")
     private String encryptionKey;

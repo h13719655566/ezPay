@@ -22,6 +22,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @RestController
 @RequestMapping("/api/payments")
 @RequiredArgsConstructor
+@CrossOrigin
 @Tag(name = "Payment Management", description = "APIs for processing payments")
 public class PaymentController {
 

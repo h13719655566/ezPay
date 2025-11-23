@@ -7,6 +7,5 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface WebhookDeliveryRepository extends JpaRepository<WebhookDelivery, Long> {
-
     List<WebhookDelivery> findBySuccessFalseAndNextRetryAtBefore(LocalDateTime now);
 }
