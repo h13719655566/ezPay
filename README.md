@@ -120,7 +120,6 @@ MERCHANT -->|HTTP response| DISPATCH
 
 %% Update Logs
 DISPATCH -->|Update attempt, statusCode,\nresponseBody, nextRetryAt| DB2
-
 ```
 
 ## ⚙️ Tech Stack
